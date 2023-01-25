@@ -1,0 +1,132 @@
+:root {
+    --primary: #01996a;
+    --primary-dark:#064531;
+    --business: #3a82ee;
+    --light:#eee;
+    --gray:#888;
+    --dark:#313154;
+    --danger:#e94738;
+    --white:#fff ;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family:"montserrat",sans-serif;
+
+}
+body {
+    background-color: var(--light);
+}
+
+.app {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.bearish {
+    color: var(--danger);  
+}
+
+.bullish {
+    color:var(--primary);
+}
+
+.header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--primary);
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
+.header button,
+input {
+    outline: none;
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--light) !important;
+    padding: 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+.header button:hover {
+    cursor: pointer;
+    background-color: var(--primary-dark);
+}
+
+.header input {
+    flex: 1 1 0%;
+    font-weight: 400;
+}
+
+.top-rated .top-rated-coin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    opacity: 1;
+}
+
+.top-rated-coin .percent {
+    font-weight: 500;
+    font-size: larger;
+}
+
+.top-rated-coin .img {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.top-rated-coin .img img {
+    height: 20px;
+    width: 20px;
+}
+
+.price {
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.sticky-card {
+    position: sticky;
+    top: 8%;
+    padding: 1rem 0 0 0;
+    background-color: rgba(255, 255, 255, 0.786);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    z-index: 1;
+}
+  
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.57rem;
+    background-color: rgba(255, 255, 255, 0.786);
+}
+  
+.card-item,
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary);
+    color: var(--light);
+    border-radius: 0.5rem;
+    min-height: 85px;
+    padding: 0.5rem 0;
+    font-weight: 500;
+}
+  
+.card-item.next {
+    background-color: var(--danger);
+}
